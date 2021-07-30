@@ -26,7 +26,7 @@
 
                       <div class="row">
                         <div class="col-md-10">
-                            <h2> Post 1</h2>
+                            <h2> Post </h2>
                         </div>
                         <div class="col-md-2"> 
                             <a href="{{ url('upload-post') }}" class="btn btn-info float-right">Add Post</a>
