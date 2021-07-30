@@ -25,16 +25,16 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // post routes
-Route::get('upload-post', [PostController::class, 'index']);
-Route::post('save', [PostController::class, 'store']);
-Route::get('edit-post/{id}', [PostController::class, 'edit']);
-Route::post('update', [PostController::class, 'update']);
-Route::get('delete-post/{id}', [PostController::class, 'destroy']);
+Route::resource('upload-post', [PostController::class, 'index']);
+Route::resource('save', [PostController::class, 'store']);
+Route::resource('edit-post/{id}', [PostController::class, 'edit']);
+Route::resource('update', [PostController::class, 'update']);
+Route::resource('delete-post/{id}', [PostController::class, 'destroy']);
 
 // comment routes
-Route::get('comment/{id}', [CommentController::class, 'show']);
-Route::post('comment_save', [CommentController::class, 'store']);
-Route::get('delete-comment/{id}', [CommentController::class, 'destroy']);
+Route::resource('comment/{id}', [CommentController::class, 'show']);
+Route::resource('comment_save', [CommentController::class, 'store']);
+Route::resource('delete-comment/{id}', [CommentController::class, 'destroy']);
 
 
 
